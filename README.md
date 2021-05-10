@@ -8,3 +8,5 @@
 
 
 ## APK
+
+[Apk](https://github.com/gauri547/Hello-Toast/releases/download/v1/app-debug.apk)
