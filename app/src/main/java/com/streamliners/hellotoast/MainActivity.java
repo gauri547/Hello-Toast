@@ -23,8 +23,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Event Handlers
      */
-
-    private void setUpEventHandlers(){
+    private void setUpEventHandlers() {
         b.toastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,22 +36,38 @@ public class MainActivity extends AppCompatActivity {
                 showCount();
             }
         });
+        b.zeroButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showZero();
+            }
+        });
     }
-    /**
-     * This function increase the count
-     */
 
+
+    /**
+     * This function will initialize the counter to zero.
+     */
+    private void showZero() {
+        b.countTextView.setText(""+ 0);
+        count = 0;
+    }
+
+
+    /**
+     * This function will increase the count.
+     */
     private void showCount() {
         b.countTextView.setText(""+count);
         count++;
     }
+
+
     /**
-     * This function will show a toast
+     * This function will show a toast.
      */
-    private void showToast(){
+    private void showToast() {
         Toast toast = Toast.makeText(this,"Hello Toast",Toast.LENGTH_SHORT);
         toast.show();
     }
-
-
 }
